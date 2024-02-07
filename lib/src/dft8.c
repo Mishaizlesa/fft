@@ -45,21 +45,21 @@ extern void dft8Fwd (const cfloat32_t *pSrc, cfloat32_t *pDst)
     tmpDst[7].re   = tmp_op[4] -tmp_op[5];
     tmpDst[7].im   = tmp_op[6] + tmp_op[7];  
 
+    cfloat32_t tmp1;
+    tmp1.re = tmpDst[5].re*inv_sqrt2;
+    tmp1.im = tmpDst[5].im*inv_sqrt2;
+    tmpDst[5].re = tmp1.re + tmp1.im;
+    tmpDst[5].im = tmp1.im - tmp1.re;
 
-    float re = tmpDst[5].re * inv_sqrt2 + tmpDst[5].im * inv_sqrt2;
-    float im = tmpDst[5].im * inv_sqrt2 - tmpDst[5].re * inv_sqrt2;
-    tmpDst[5].re = re;
-    tmpDst[5].im = im;
 
-
-    im = -tmpDst[6].re;
+    float im = -tmpDst[6].re;
     tmpDst[6].re = tmpDst[6].im;
     tmpDst[6].im = im;
 
-    re = -tmpDst[7].re * inv_sqrt2 + tmpDst[7].im * inv_sqrt2;
-    im = -tmpDst[7].im * inv_sqrt2 - tmpDst[7].re * inv_sqrt2;
-    tmpDst[7].re = re;
-    tmpDst[7].im = im;
+    tmp1.re = tmpDst[7].re*inv_sqrt2;
+    tmp1.im = tmpDst[7].im*inv_sqrt2;
+    tmpDst[7].re = -tmp1.re + tmp1.im;
+    tmpDst[7].im = -tmp1.im - tmp1.re;
 
 
 

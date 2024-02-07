@@ -10,7 +10,6 @@
 #include <stdlib.h>
 
 #define OWN_2PI 0x1.921fb54442d18p+2
-
 // Complex float data type
 typedef struct {
     float re;
