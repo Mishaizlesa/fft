@@ -5,7 +5,7 @@ optimized sequential version with DFT4 half-vectorized: 11 CPE
 
 omp version (2 threads): 12777 CPE
 
-DFT 16:
+DFT 16 (4x4):
 baseline: ???
 ptimized scalar sequential version: 12.75 CPE
 optimized sequential version with DFT4 half-vectorized: 13 CPE
