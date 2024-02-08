@@ -22,7 +22,7 @@ add_library(CustomConfiguration INTERFACE)
 target_link_libraries(CustomConfiguration INTERFACE BaseConfiguration)
 if(BUILD_TYPE STREQUAL "Release")
     # Add custom optimization flags here:
-    target_compile_options(CustomConfiguration INTERFACE -O3)
+    target_compile_options(CustomConfiguration INTERFACE -Os)
 else()
     target_link_libraries(CustomConfiguration INTERFACE BaseOptConfiguration)
 endif()

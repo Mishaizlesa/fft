@@ -1,0 +1,11 @@
+DFT 8:
+baseline: 47.875 CPE
+optimized scalar sequential version: 10.125 CPE (81 cycles)
+optimized sequential version with DFT4 half-vectorized: 11 CPE
+
+omp version (2 threads): 12777 CPE
+
+DFT 16 (4x4):
+baseline: ???
+ptimized scalar sequential version: 12.75 CPE (204 cycles)
+optimized sequential version with DFT4 half-vectorized: 13 CPE
